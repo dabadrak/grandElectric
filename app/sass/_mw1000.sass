@@ -1,0 +1,100 @@
+@media screen and (max-width: 1000px)
+
+  .button
+    &__white:hover
+      background-color: #ffffff
+    &__red:hover
+      background-color: #ff7c5b
+    &__grey:hover
+      background-color: #595959
+
+  .headerTop
+    .logoFull
+      flex-grow: 1
+
+    #mainMenu
+      display: none
+
+    .mobileMenuSideBar
+      display: block
+
+    #mobileMenuBtn
+      display: block
+      order: 2
+      width: 40px
+      height: 40px
+      margin-left: 2.3vw
+      border-radius: 5px
+      background: $darkFontColor url("../img/menu.svg") center no-repeat
+      background-size: 60%
+
+    .headerContacts
+      order: 1
+
+
+  .servicesWrap
+    .servicesPriceNav
+      justify-content: space-around
+      li
+        figure
+          font-size: 3rem
+          .imgContainer
+            width: 100px
+            background-size: contain
+            img
+              width: 90%
+              height: 90%
+    .servicesTabs
+      & #servicesTabs1 .servicesTabContentWrap, & #servicesTabs2 .servicesTabContentWrap, & #servicesTabs3 .servicesTabContentWrap
+        background-position: left center
+      .servicesTab
+        .servicesTabContentWrap
+          font-size: 2vw
+          h3
+            font-size: 2.5vw
+            line-height: 3vw
+            border-bottom: 3px solid $darkBgColor
+          table
+            line-height: 3vw
+            tr:hover>td
+              background-color: #ffffff
+            td
+              border-left: 3px solid $darkBgColor
+              border-bottom: 3px solid $darkBgColor
+              &:first-child
+                border-left: 0
+          a
+            font-size: 2.5vw
+            line-height: 3vw
+
+  .servicesBigWrap
+    .servicesBigArticle
+      .left
+        .top
+          h3
+            font-size: 5.5rem
+          h4
+            font-size: 3.5rem
+          ol
+            font-size: 3rem
+        .bottom
+          .infographics figcaption
+            h5
+              font-size: 2.86rem
+            .number
+              font-size: 4vw
+              line-height: 3.5vw
+            .label
+              font-size: 2rem
+        .buttons
+          .button__servicesBig
+            line-height: 7rem
+            padding: 0 2rem
+            font-size: 3.2rem
+            letter-spacing: 0.2rem
+      .right
+        &:hover
+          transform: none
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.23)
+        &:hover>.imgMask
+          opacity: 0

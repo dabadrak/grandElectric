@@ -1,0 +1,51 @@
+.guarantiesWrap
+  margin: 6rem 0 8rem
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-template-rows: auto
+  grid-template-areas: 'heading heading heading heading' 'contractImg timingImg tidinessImg accuracyImg' 'contractLabel timingLabel tidinessLabel accuracyLabel'
+  align-items: center
+  justify-items: center
+
+  h2
+    grid-area: heading
+    padding-bottom: 5rem
+  .icon
+    width: 100%
+    height: 17vw
+    &__contract
+      grid-area: contractImg
+      background: url("../img/medal.png") center no-repeat / 42%
+    &__timing
+      grid-area: timingImg
+      background: url("../img/clock.png") center no-repeat / 56%
+    &__tidiness
+      grid-area: tidinessImg
+      background: url("../img/darts.png") left 60% top 20% no-repeat / 60%
+    &__accuracy
+      grid-area: accuracyImg
+      background: url("../img/tablet.png") center no-repeat / 44%
+  span
+    font-size: 2vw
+    font-weight: bold
+    text-align: center
+    &.contractLabel
+      grid-area: contractLabel
+    &.timingLabel
+      grid-area: timingLabel
+    &.tidinessLabel
+      grid-area: tidinessLabel
+    &.accuracyLabel
+      grid-area: accuracyLabel
+
+
+@media screen and (max-width: 850px)
+  .guarantiesWrap
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: auto
+    grid-template-areas: 'heading heading' 'contractImg timingImg' 'contractLabel timingLabel' 'tidinessImg accuracyImg' 'tidinessLabel accuracyLabel'
+    grid-row-gap: 10px
+    .icon
+      height: 30vw
+    span
+      font-size: 4vw

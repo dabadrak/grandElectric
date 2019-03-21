@@ -1,0 +1,114 @@
+@media screen and (max-width: 850px)
+
+  html
+    font-size: 4px
+
+  h2
+    font-size: 7rem
+
+  .button
+    &__bubblyButton.animate
+      &:before, &:after
+        background-image: none
+        display: none
+
+  .headerTop
+    .logoFull
+      flex-grow: 0
+      order: 1
+    .mobileMenuContainer
+      width: 100%
+    .headerContacts
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      width: 100%
+      order: 0
+      .phone a
+        font-size: 5rem
+        line-height: 4rem
+        margin-left: 5px
+
+  .offerWrap
+    h2
+      font-size: 6rem
+
+  .servicesWrap
+    .servicesPriceNav
+      flex-wrap: wrap
+      figure
+        flex-direction: column
+        align-items: center
+        figcaption
+          font-size: 4rem
+          margin: 0
+          text-align: center
+    .servicesTabs
+      & #servicesTabs1 .servicesTabContentWrap, & #servicesTabs2 .servicesTabContentWrap, & #servicesTabs3 .servicesTabContentWrap
+       background-image: none
+      .servicesTab
+        .servicesTabContentWrap
+          font-size: 4rem
+          padding: 10px 0
+          h3
+            font-size: 4.8rem
+            line-height: 7rem
+            border-bottom: 3px solid
+          table
+            line-height: 7rem
+          a
+            font-size: 4.8rem
+            line-height: 7rem
+          .servicesTabContent
+            width: 100%
+
+  .servicesBigWrap
+    .servicesBigArticle
+      padding: 10px 0
+      &__housesAppartments
+        background-position: center bottom
+        background-size: 70%
+      &__woodenHouses
+        background-position: center bottom
+        background-size: 70%
+      &__commercial
+        background-position: center bottom
+        background-size: 70%
+      h2
+        margin-bottom: 10px
+      .content
+        flex-direction: column-reverse
+        .left
+          width: 100%
+          .top
+            h3
+              margin-top: 10px
+          .bottom
+            .infographics
+              figure
+                img
+                  width: 20%
+                figcaption
+                  h5
+                    font-size: 3rem
+                  .number
+                    font-size: 6rem
+                    line-height: 5.2rem
+                  .label
+                    font-size: 2.5rem
+        .right
+          width: 100%
+          height: 300px
+    .servicesBigOther
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: "heading heading"
+      .item
+        height: 40vw
+        &:hover
+          box-shadow: none
+          //.mask
+          //  top: 67%
+        .mask
+          .heading
+            h3
+              font-size: 4vw

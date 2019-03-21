@@ -1,0 +1,34 @@
+{
+  "name": "bestelectric",
+  "version": "1.0.0",
+  "description": "Electrician service website",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "bower": "^1.8.8",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "pug": "^2.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dabadrak/bestElectric.git"
+  },
+  "author": "Badrak Daniil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dabadrak/bestElectric/issues"
+  },
+  "homepage": "https://github.com/dabadrak/bestElectric#readme"
+}

@@ -1,0 +1,123 @@
+.servicesPriceNavBg
+  background-image: linear-gradient(to top, rgb(51, 50, 50), rgba(51, 50, 50, 0.99), rgba(51, 50, 50, 0.97), rgba(51, 50, 50, 0.95), rgba(51, 50, 50, 0.9), rgba(51, 50, 50, 0.8), rgba(51, 50, 50, 0.7), rgba(51, 50, 50, 0.5), rgba(51, 50, 50, 0.2), rgba(51, 50, 50, 0))
+
+.servicesPriceNav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  li
+    transition: transform ease-out 200ms
+    position: relative
+    display: block
+    &:hover
+      transform: scale(1.1)
+    &:active
+      transform: scale(1)
+    &.active
+      transform: scale(1.1)
+      .imgContainer__1
+        background: url("../img/servicesComplexDotsActive.png") center no-repeat
+      .imgContainer__2
+        background: url("../img/servicesToolsDotsActive.png") center no-repeat
+      .imgContainer__3
+        background: url("../img/servicesCommercialDotsActive.png") center no-repeat
+
+    figure
+      display: flex
+      font-size: 4.71rem
+      font-weight: bold
+      color: #ffffff
+      .imgContainer
+        width: 150px
+        display: flex
+        justify-content: center
+        transition: all 300ms
+        &__1
+          background: url("../img/servicesComplexDots.png") center no-repeat
+        &__2
+          background: url("../img/servicesToolsDots.png") center no-repeat
+        &__3
+          background: url("../img/servicesCommercialDots.png") center no-repeat
+      figcaption
+        display: flex
+        align-items: center
+        margin-left: 3rem
+  .labelScreen
+    display: block
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+
+
+.servicesTabs
+  background-color: $darkBgColor
+  & #servicesTabs1 .servicesTabContentWrap
+    background: url("../img/servicesComplexImg.png") left top 25px no-repeat
+    background-size: 45%
+  & #servicesTabs2 .servicesTabContentWrap
+    background: url("../img/servicesToolsImg.png") left -50px top no-repeat
+    background-size: 55%
+  & #servicesTabs3 .servicesTabContentWrap
+    background: url("../img/servicesCommercialImg.png") left top 25px no-repeat
+    background-size: 50%
+  .content
+    padding-top: 10px
+  .servicesTab
+    h2
+      color: #ffffff
+    .servicesTabContentWrap
+      font-size: 4rem
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      padding: 50px 0 25px
+      .servicesTabContent
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        width: 49%
+        .accordion__services
+          width: 100%
+          border-top-right-radius: 5px
+          border-top-left-radius: 5px
+          overflow: hidden
+        h3
+          font-weight: normal
+          text-align: center
+          font-size: 4.8rem
+          line-height: 7rem
+          background-color: #acacac
+          cursor: pointer
+          transition: background-color 200ms
+          border-bottom: 5px solid
+          &:hover
+            background-color: #dfdfdf
+          &:active
+            background-color: #acacac
+          &:after
+            content: " +"
+            font-weight: bold
+        h3.ui-accordion-header-active
+          background-color: #dfdfdf
+          &:after
+            content: " -"
+
+      table
+        width: 100%
+        margin: 0 0
+        line-height: 7rem
+        tr:hover>td
+          background-color: #dfdfdf
+        td
+          background-color: #ffffff
+          border-left: 5px solid $darkBgColor
+          border-bottom: 5px solid $darkBgColor
+          text-align: center
+          &:first-child
+            width: 70%
+            border-left: 0
+            text-align: left
+            padding-left: 4rem
+

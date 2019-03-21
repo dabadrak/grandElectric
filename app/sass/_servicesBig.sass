@@ -1,0 +1,178 @@
+.servicesBigWrap
+  .servicesBigArticle
+    padding: 40px 0
+    h2
+      margin-bottom: 40px
+    &__housesAppartments
+      background: url("../img/servicesBigHousesAppartmentsBg.png") left 40% bottom no-repeat
+      background-size: contain
+    &__woodenHouses
+      background: #5e5249 url("../img/servicesBigWoodenHousesBg.png") left 40% bottom no-repeat
+      background-size: contain
+      color: white
+    &__commercial
+      background: $darkBgColor url("../img/servicesBigCommercialBg.png") left 40% bottom no-repeat
+      background-size: contain
+      color: white
+    .content
+      display: flex
+      justify-content: space-between
+    .left
+      width: 49%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      .top
+        h3
+          font-size: 7.5rem
+          margin-bottom: 1rem
+          &.noMargin
+            margin-bottom: 0
+        h4
+          font-size: 5.5rem
+        h5
+          font-size: 4.2rem
+          font-weight: normal
+          margin-bottom: 1rem
+        ol
+          font-size: 4.5rem
+          padding-left: 7rem
+          margin-bottom: 3rem
+      .bottom
+        .infographics
+          display: flex
+          justify-content: space-between
+          margin-bottom: 3rem
+          figure
+            width: 50%
+            display: flex
+            align-items: flex-end
+            img
+              margin-right: 2rem
+              width: 30%
+          figcaption
+            display: flex
+            flex-wrap: wrap
+            white-space: nowrap
+            h5
+              font-size: 3.86rem
+              font-weight: bold
+              width: 100%
+            span
+              display: flex
+              align-items: flex-end
+            .number
+              font-size: 9.29rem
+              color: #ff7c5b
+              font-weight: bold
+              line-height: 8rem
+            .label
+              margin-left: 0.1rem
+              font-size: 3.43rem
+              font-weight: bold
+        .buttons
+          display: flex
+          justify-content: space-between
+
+    .right
+      width: 49%
+      position: relative
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.23)
+      transition: all ease-out 300ms
+      &.img1
+        background: url("../img/servicesBigHouseApartmentsImg.jpg") center bottom no-repeat
+        background-size: cover
+      &.img2
+        background: url("../img/servicesBigWoodenHousesImg.jpg") center bottom no-repeat
+        background-size: cover
+      &.img3
+        background: url("../img/servicesBigCommercialImg.jpg") center bottom no-repeat
+        background-size: cover
+      &:hover
+        transform: scale(1.02)
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5)
+      &:hover>.imgMask
+        opacity: 1
+
+      .imgMask
+        opacity: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 0
+        right: 0
+        background: rgba(0, 0, 0, 0.7)
+        width: 100%
+        height: 100%
+        transition: all ease-out 300ms
+        font-size: 6rem
+        color: #ffffff
+        cursor: pointer
+        span
+          border: 2px solid #ffffff
+          padding: 0 5rem
+          line-height: 12rem
+          transition: all ease-out 100ms
+          &:hover
+            border-color: #afafaf
+            color: #afafaf
+
+  .servicesBigOther
+    padding: 0 5px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-rows: auto
+    grid-template-areas: "heading heading heading heading"
+    grid-gap: 5px
+    h2
+      grid-area: heading
+      padding: 15px 0 10px
+    .item
+      overflow: hidden
+      height: 20vw
+      transition: all ease-out 200ms
+      position: relative
+      border-radius: 2px
+      &__sockets
+        background: url('../img/servicesSockets.jpg') center no-repeat / cover
+      &__shields
+        background: url('../img/servicesShields.jpg') center no-repeat / cover
+      &__lights
+        background: url('../img/servicesLights.jpg') center no-repeat / cover
+      &__wiring
+        background: url('../img/servicesWiring.jpg') center no-repeat / cover
+      &__strocking
+        background: url('../img/servicesStrocking.jpg') center no-repeat / cover
+      &__canals
+        background: url('../img/servicesCanals.jpg') center no-repeat / cover
+      &__technic
+        background: url('../img/servicesTechnic.jpg') center no-repeat / cover
+      &__warmFloors
+        background: url('../img/serviceswarmFloors.jpg') center no-repeat / cover
+      &:hover
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4)
+      .mask
+        position: absolute
+        top: 67%
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,0.5)
+        transition: top 300ms ease-out
+        padding-bottom: 5%
+        &.active
+          top: 0
+        .heading
+          height: 33%
+          display: flex
+          align-items: center
+          justify-content: center
+          h3
+            font-size: 2vw
+            color: #ffffff
+        .buttons
+          height: 67%
+          display: flex
+          flex-direction: column
+          justify-content: space-evenly
+          align-items: center

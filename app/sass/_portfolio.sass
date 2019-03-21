@@ -1,0 +1,40 @@
+#portfolio
+  position: relative
+  .pm-content
+    width: 100%
+    color: #ffffff
+    border-radius: 0
+    background: $darkBgColor
+    padding: 20px 0 0
+    .pm-categories
+      width: 100%
+      max-width: $siteWidth
+      margin: 0 auto 10px
+      padding: 0 2%
+      justify-content: space-between
+      li:last-child
+        margin-right: 0
+    .pm-carousel-container
+      position: static
+      margin-bottom: 20px
+    .pm-footer
+      width: 100%
+      max-width: $siteWidth
+      margin: 0 auto
+      padding: 0 2%
+      .pm-footer-bottom
+        margin-top: 10px
+
+@media screen and (max-width: 850px)
+  #portfolio
+    .pm-content
+      padding: 14rem 0 0
+      h2
+        font-size: 7rem
+        height: 30px
+        font-weight: bold
+        letter-spacing: normal
+        background-color: transparent
+        margin-top: 3rem
+      .pm-carousel-container
+        margin: 0

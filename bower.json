@@ -1,0 +1,25 @@
+{
+  "name": "bestelectric",
+  "description": "Electrician service website",
+  "main": "index.js",
+  "authors": [
+    "Badrak Daniil"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/dabadrak/bestElectric",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dist/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "owl.carousel": "owl-carousel2#^2.3.4",
+    "jquery-mask-plugin": "jquery-mask#^1.14.15",
+    "fontawesome": "^5.7.2",
+    "jquery-ui": "^1.12.1"
+  }
+}

@@ -1,0 +1,184 @@
+@import fontface
+@import vars
+@import header
+@import offer
+@import services
+@import servicesBig
+@import mobileMenu
+@import modalPortfolio
+@import guaranties
+@import portfolio
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  outline: 0
+
+html body
+  width: 100%
+  height: 100%
+
+html
+  font-family: "PT Sans", sans-serif
+  font-size: 5px
+  color: $darkFontColor
+
+body
+  overflow-x: hidden
+
+h2
+  font-size: 8.57rem
+  text-align: center
+
+button
+  border: 0
+  outline: 0
+  font-family: "PT Sans", sans-serif
+  letter-spacing: 0.1rem
+
+.mainContent
+  height: calc(100%)
+
+.content
+  width: 100%
+  max-width: $siteWidth
+  padding: 0 2%
+  margin: 0 auto
+
+.contentWide
+  width: 95%
+  margin: 0 auto
+
+.button
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 4.8rem
+  line-height: 7rem
+  text-decoration: none
+  text-align: center
+  border-radius: 5px
+  transition: all ease-in 0.1s, box-shadow ease-in 0.15s
+  cursor: pointer
+  &__services
+    width: 49.5%
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+  &__servicesBig
+    width: 32%
+    line-height: 8rem
+    &:active
+      transform: scale(0.9)
+      background-color: darken(#595959, 5%)
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3)
+  &__servicesOther
+    width: 80%
+    height: 26%
+    &:active
+      transform: scale(0.9)
+      background-color: darken(#595959, 5%)
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3)
+  &__white
+    background-color: #ffffff
+    color: $darkFontColor
+    &:hover
+      background-color: #dfdfdf
+    &:active
+      background-color: #acacac
+  &__grey
+    background-color: #595959
+    color: #ffffff
+    &:hover
+      background-color: #787878
+  &__red
+    background-color: #ff7c5b
+    color: #ffffff
+    font-weight: bold
+    &:hover
+      background-color: #ff8f59
+    &:active
+      background-color: #bd5f47
+  &__transparent
+    background-color: transparent
+    border: 1px solid #ffffff
+    border-radius: 3px
+    color: #ffffff
+    line-height: 5rem
+    &:hover
+      background-color: rgba(255,255,255,0.2)
+  &__bubblyButton
+    $button-bg: #ff7c5b
+    color: #ffffff
+    font-weight: bold
+    display: inline-block
+    -webkit-appearance: none
+    background-color: $button-bg
+    position: relative
+    box-shadow: 0 2px 25px rgba(255, 124, 91, 0.5)
+    &:before, &:after
+      position: absolute
+      content: ''
+      display: block
+      width: 140%
+      height: 100%
+      left: -20%
+      transition: all ease-in-out 0.5s
+      background-repeat: no-repeat
+    &:before
+      display: none
+      top: -75%
+      background-image: radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle,  transparent 20%, $button-bg 20%, transparent 30%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%)
+      background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%
+      background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%
+    &:after
+      display: none
+      bottom: -75%
+      background-image: radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%)
+      background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%
+    &:active
+      transform: scale(0.9)
+      background-color: darken($button-bg, 5%)
+      box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2)
+    &.animate
+      &:before
+        display: block
+        animation: topBubbles ease-in-out 0.75s forwards
+      &:after
+        display: block
+        animation: bottomBubbles ease-in-out 0.75s forwards
+
+.bgTop
+  width: 100%
+  position: absolute
+  z-index: -10
+  height: calc(100vh + 140px)
+  background: url("../img/bgTop.jpg") top right no-repeat
+  background-size: cover
+
+#modalPortfolioScreen
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100vw
+  z-index: 990
+  background-color: rgba(0, 0, 0, 0.8)
+  color: #ffffff
+  display: none
+  justify-content: center
+  align-items: center
+
+#mobileMenuContentMask
+  display: none
+  width: 100vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 100
+  background-color: rgba(0, 0, 0, 0.85)
+
+@import keyframes
+@import mw1000
+@import mw850

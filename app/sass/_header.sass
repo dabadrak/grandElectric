@@ -1,0 +1,95 @@
+.headerWrap
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff, #fefefe, #fefefe, #fdfdfd, #fdfdfd, #fcfcfc, #fcfcfc, #fcfcfc, #fcfcfc, #fcfcfc, #fcfcfc)
+  position: fixed
+  width: 100%
+  z-index: 299
+
+.headerTop
+  height: 80px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+
+  .logoFull
+    text-decoration: none
+    color: $darkFontColor
+    figure
+      display: flex
+      align-items: center
+      figcaption
+        display: flex
+        flex-direction: column
+        justify-content: center
+        font-family: Tahoma, sans-serif
+        margin-left: 10px
+        h2
+          font-size: 7rem
+          font-weight: normal
+          line-height: 6rem
+          span
+            font-weight: bold
+        >span
+          font-size: 3.53rem
+          position: relative
+          left: 3px
+          color: #3f3f3f
+
+  .mainMenu
+    list-style-type: none
+    display: flex
+    align-items: center
+    font-size: 4rem
+    justify-content: space-between
+
+    >li
+      position: relative
+      line-height: 40px
+      border-bottom: transparent 2px solid
+      margin-left: 20px
+      transition: transform 300ms, border-bottom-color 300ms
+
+      &:hover
+        border-bottom: $secondColor 2px solid
+        transform: translateY(-3px)
+        >a
+          color: $secondColor
+    li.active>a
+      color: $secondColor
+    a
+      text-decoration: none
+      color: $darkFontColor
+      transition: color 800ms
+
+    .mainMenuSub
+      position: absolute
+      top: 42px
+      left: -13px
+      background-color: #f7f7f7
+      list-style-type: none
+      font-size: 3rem
+      box-sizing: padding-box
+      padding: 10px 15px
+      white-space: nowrap
+      border-radius: 3px
+      line-height: 5rem
+      display: none
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4)
+      >li:hover
+        text-decoration: underline
+
+  #mobileMenuBtn
+    display: none
+
+  .headerContacts
+    .city
+      font-size: 4rem
+      line-height: 5rem
+      text-align: right
+    .phone
+      a
+        font-size: 8rem
+        color: $darkFontColor
+        font-weight: bold
+        text-decoration: none
+        line-height: 6rem

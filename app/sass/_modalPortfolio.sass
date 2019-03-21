@@ -1,0 +1,182 @@
+
+
+.pm-content
+  width: 90%
+  height: 95%
+  background-color: #000000
+  padding: 15px 30px 0 30px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  border-radius: 5px
+  .pm-header
+    width: 100%
+    h2
+      margin-bottom: 10px
+      width: 100%
+      line-height: 8rem
+    ul
+      list-style-type: none
+      display: flex
+      justify-content: space-around
+      align-content: center
+      font-size: 4rem
+      position: relative
+      font-weight: bold
+      width: 100%
+      li
+        display: flex
+        align-items: center
+        text-align: center
+        margin-right: 10px
+        border-bottom: 5px rgba(255, 255, 255, 0) solid
+        padding-bottom: 3px
+        cursor: pointer
+        &:hover
+          border-bottom: 5px #ffffff solid
+        &.active
+          border-bottom: 5px #ffffff solid
+  .pm-carousel-container
+    position: absolute
+    left: 0
+    top: 22%
+    width: 100vw
+    .pm-carousel-inner
+      height: 60vh
+  .pm-footer
+    width: 100%
+    .pm-info
+      h3
+        font-size: 3rem
+      h4
+        font-size: 3rem
+        span
+          font-weight: normal
+    .pm-footer-bottom
+      width: 100%
+      display: flex
+      margin-top: 3px
+      align-items: flex-end
+      .pm-footer-inner
+        margin-right: 3%
+        font-size: 4rem
+        .pm-price, .pm-duration, .pm-another
+          padding: 0 3px
+          span
+            font-size: 1.4em
+            font-weight: bold
+          span.pm-duration-word
+            font-size: 1em
+            font-weight: normal
+        .pm-another
+          cursor: pointer
+        .pm-underline
+          height: 7px
+          background-color: #ffffff
+          border-top-left-radius: 3px
+          border-top-right-radius: 3px
+
+.pm-close
+  position: absolute
+  top: 4%
+  right: 6%
+  width: 20px
+  height: 20px
+  transition: transform 300ms ease-out
+  cursor: pointer
+  &:hover
+    transform: rotate(180deg)
+    path
+      fill: #d6d6d6
+.pm-control
+  position: absolute
+  top: 47%
+  width: 3%
+  height: 3vw
+  z-index: 999
+  cursor: pointer
+  transition: background-color 100ms
+  border-radius: 1.5vw
+  &__left
+    left: 5px
+    background: url('../img/chevronLeft.png') rgba(0, 0, 0, 0.3) center left 48% no-repeat
+    background-size: 25%
+  &__right
+    right: 5px
+    background: url('../img/chevronRight.png') rgba(0, 0, 0, 0.3) center right 48% no-repeat
+    background-size: 25%
+  &:hover
+    background-color: rgba(0, 0, 0, 0.8)
+
+@media screen and (max-width: 1000px)
+  .pm-content
+    width: 100%
+    height: 100%
+    padding: 15px 0 0 0
+    position: relative
+    .pm-header
+      h2
+        margin-bottom: 20px
+      ul
+        padding: 0 15px
+        margin-bottom: 10px
+        font-size: 3rem
+        font-weight: normal
+    .pm-carousel-container
+      position: static
+      width: auto
+      height: 100%
+      .pm-carousel-inner
+        height: 80vh
+    .pm-footer
+      padding: 0 15px
+      .pm-footer-bottom
+        .pm-footer-inner
+          font-size: 3.5rem
+  .pm-close
+    top: 10px
+    right: 10px
+
+@media screen and (max-width: 850px)
+  .pm-content
+    width: 100%
+    height: 100%
+    padding: 0
+    .pm-header
+      position: absolute
+      top: 0
+      z-index: 991
+      h2
+        background-color: rgba(0,0,0,0.3)
+        font-size: 5rem
+        font-weight: normal
+        margin-bottom: 0
+        line-height: 5rem
+        letter-spacing: 0.3rem
+        padding: 5px 0
+      ul
+        display: none
+    .pm-carousel-container
+      height: 100vh
+      .pm-carousel-inner
+        height: 100vh
+    .pm-footer
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 991
+      .pm-info
+        display: none
+      .pm-footer-bottom
+        .pm-footer-inner
+          font-size: 3.5rem
+  .pm-close
+    width: 5rem
+    height: 5rem
+    top: 5px
+    right: 5px
+    z-index: 991
+  .pm-control
+    width: 6%
+    height: 6vw
+    border-radius: 3vw
