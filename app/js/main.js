@@ -138,7 +138,7 @@ $(document).ready(()=> {
      * Вызов потфолио во всплывающем окне
      */
     $('.jsPortfolioModalTrigger').click((e) => {
-      new PortfolioModal('../json/portfolioModal.json', '#modalPortfolioScreen', true, e.target.dataset.category);
+      new Portfolio('../json/portfolioModal.json', '#modalPortfolioScreen', true, e.target.dataset.category);
     });
     
     const $servicesBigOther = $('.servicesBigOther');
@@ -157,9 +157,35 @@ $(document).ready(()=> {
    * Управление секцией portfolio
    */
   const portfolio = (() => {
-    new PortfolioModal('../json/portfolioModal.json', '#portfolio')
+    new Portfolio('../json/portfolioModal.json', '#portfolio')
   })();
   
-  //Анимированная кнопка заказить
+  /**
+   * Управление модальным окном request
+   */
+  const request = (() => {
+    const $requestContainer = $('#requestModal');
+    
+    $('.requestTrigger').click(() => {
+      $requestContainer.addClass('active');
+      $('html').css('overflow', 'hidden');
+    });
+    $($requestContainer).click(() => {
+      if (event.target.id === 'requestModal') {
+        $requestContainer.removeClass('active');
+        $('html').css('overflow', 'auto');
+      }
+    $('#requestClose').click(() => {
+      $requestContainer.removeClass('active');
+      $('html').css('overflow', 'auto');
+    })
+    });
+  
+    new LengthChecker ('#request');
+    $requestContainer
+        .find('input[name="phone"]')
+        .mask('+7 (000) 000-0000')
+  })();
+  //Анимированная кнопка заказать
   new BubblyButton();
 });

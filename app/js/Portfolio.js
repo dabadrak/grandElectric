@@ -11,7 +11,7 @@
  * @property {array} itemsInCategory Объекты в выбранной категории
  * @property {number} currentIdx Индекс отображаемого объекта из выбранной категории
  */
-class PortfolioModal {
+class Portfolio {
   constructor (source, containerId, modal = false, triggerCategory = 'проводка в квартире и доме') {
     this.source = source;
     this.modal = modal;
@@ -77,7 +77,7 @@ class PortfolioModal {
     this.priceContainer = $(`<div class="pm-price">стоимотсь: <span></span> &#8381;</div>`);
     this.durationContainer = $(`<div class="pm-duration">срок: <span class="pm-duration-number"></span> <span class="pm-duration-word"></span></div>`);
     this.anotherBtn = $('<div class="pm-another">показать следующий</div>');
-    this.closeBtn = $('<svg version="1.1" id="Capa_1" viewBox="0 0 212.982 212.982" class="pm-close"><path' +
+    this.closeBtn = $('<svg version="1.1" id="Capa_1" viewBox="0 0 212.982 212.982" class="pm-close"><g><path' +
         ' fill="#ffffff" style="fill-rule:evenodd; clip-rule:evenodd;" d="M131.804,106.491l75.936-75.936c6.99-6.99,' +
         '6.99-18.323,0-25.312c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25' +
         '.312,0c-6.989,6.99-6.989,18.323,0,25.312l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,' +
