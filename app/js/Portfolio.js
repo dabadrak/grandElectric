@@ -105,7 +105,7 @@ class Portfolio {
     this.slideRightBtn.appendTo(this.container);
     this.footerBottomContainer.children().each((idx, elem) => {
       switch (idx) {
-        case 0: $(elem).append(this.anotherBtn).append($('<div class="pm-underline"/>'));
+        case 0: $(elem).addClass('pm-another-container').append(this.anotherBtn).append($('<div class="pm-underline"/>'));
           break;
         case 1: $(elem).append(this.durationContainer).append($('<div class="pm-underline"/>'));
           break;

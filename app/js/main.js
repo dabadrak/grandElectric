@@ -7,16 +7,16 @@ $(document).ready(()=> {
     //Создание меню
     const menu = new Menu('mainMenu',
         [
-          new SubMenu('Услуги', '#', 'mainMenuSub', 'mainMenuSubLi', [
+          new SubMenu('Услуги', '#servicesTabs', 'mainMenuSub', 'mainMenuSubLi', [
             new MenuItem('Проводка в квартире и доме', '#housesAppartments'),
             new MenuItem('Проводка в деревянном доме', '#woodenHouses'),
             new MenuItem('Коммерческие объекты', '#commercial'),
-            new MenuItem('Разные', '#'),
+            new MenuItem('Разные', '#servicesOther'),
           ]),
-          new MenuItem('Цены', '#'),
-          new MenuItem('Наши&nbsp;работы', '#'),
-          new MenuItem('Отзывы', '#'),
-          new MenuItem('Контакты', '#'),
+          new MenuItem('Цены', '#prices'),
+          new MenuItem('Наши&nbsp;работы', '#portfolio'),
+          new MenuItem('Отзывы', '#about'),
+          new MenuItem('Контакты', '#footer'),
         ]
     );
     //Добавление меню
@@ -58,12 +58,12 @@ $(document).ready(()=> {
             new MenuItem('Проводка в квартире и доме', '#housesAppartments'),
             new MenuItem('Проводка в деревянном доме', '#woodenHouses'),
             new MenuItem('Коммерческие объекты', '#commercial'),
-            new MenuItem('Разные', '#'),
+            new MenuItem('Разные', '#servicesOther'),
           ]),
-          new MenuItem('Цены', '#'),
-          new MenuItem('Наши&nbsp;работы', '#'),
-          new MenuItem('Отзывы', '#'),
-          new MenuItem('Контакты', '#'),
+          new MenuItem('Цены', '#price'),
+          new MenuItem('Наши&nbsp;работы', '#portfolio'),
+          new MenuItem('Отзывы', '#about'),
+          new MenuItem('Контакты', '#footer'),
         ]
     );
     //Добавление мобильного иеню
