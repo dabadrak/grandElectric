@@ -66,6 +66,11 @@ gulp.task('json', () => {
   return gulp.src('app/json/**/*.*')
       .pipe(gulp.dest('dist/json'))
 });
+gulp.task('php', () => {
+  return gulp.src('app/php/**/*.*')
+      .pipe(gulp.dest('dist/php'))
+});
+
 gulp.task('server', () => {
   return bs({
     browser: 'chrome',
@@ -111,6 +116,12 @@ gulp.task('json:watch', () => {
     done();
   }))
 });
+gulp.task('php:watch', () => {
+  return gulp.watch('app/php/**/*.*', gulp.series('php', (done) => {
+    bs.reload();
+    done();
+  }))
+});
 gulp.task('html:watch', () => {
   return gulp.watch('app/html/*.html', gulp.series('html', (done) => {
     bs.reload();
@@ -118,5 +129,5 @@ gulp.task('html:watch', () => {
   }))
 });
 
-gulp.task('default', gulp.series('clear', gulp.parallel('imageMin', 'fonts', 'sass', 'js:es6', 'pug', 'json'),
-    gulp.parallel('pug:watch', 'sass:watch', 'img:watch', 'fonts:watch', 'js:watch', 'json:watch', 'server')));
+gulp.task('default', gulp.series('clear', gulp.parallel('imageMin', 'fonts', 'sass', 'js:es6', 'pug', 'json', 'php'),
+    gulp.parallel('pug:watch', 'sass:watch', 'img:watch', 'fonts:watch', 'js:watch', 'json:watch', 'php:watch', 'server')));
