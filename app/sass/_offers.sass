@@ -1,0 +1,118 @@
+.offersWrap
+  position: relative
+  background-color: $darkBgColor
+  &:hover .offerControl
+    opacity: 1
+  .offer
+    .content
+      display: flex
+    .img
+      width: 50%
+      &__1
+        background: url("../img/offer1bg.png") left 10% center no-repeat / contain
+      &__2
+        background: url("../img/offer2bg.png") left 10% center no-repeat / contain
+    .inner
+      padding: 40px 0
+      color: #ffffff
+      width: 50%
+      max-width: 550px
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      h2
+        font-size: 8rem
+        margin-bottom: 7rem
+      p
+        font-size: 4rem
+        margin-bottom: 7rem
+      span
+        font-size: 7rem
+        margin-bottom: 7rem
+  .offerControl
+    opacity: 0
+    position: absolute
+    top: 47%
+    width: 3%
+    height: 3vw
+    z-index: 999
+    cursor: pointer
+    transition: background-color 300ms, transform 500ms, opacity 200ms
+    border-radius: 1.5vw
+    &__left
+      left: 5px
+      background: url('../img/chevronLeft.png') rgba(255, 255, 255, 0.1) center left 48% no-repeat
+      background-size: 25%
+    &__right
+      right: 5px
+      background: url('../img/chevronRight.png') rgba(255, 255, 255, 0.1) center right 48% no-repeat
+      background-size: 25%
+    &:hover
+      background-color: rgba(255, 255, 255, 0.3)
+    &:active
+      transform: scale(1.2)
+      background-color: rgba(117, 117, 117, 0)
+  .owl-dots
+    position: absolute
+    bottom: 5%
+    left: 45%
+    .owl-dot
+      width: 15px
+      height: 15px
+      background-color: rgba(255, 255, 255, 0.3)
+      border-radius: 8px
+      margin-right: 8px
+      transition: background-color 200ms ease-out
+      &:hover
+        background-color: rgba(255, 255, 255, 0.8)
+      &.active
+        background-color: #ffffff
+
+@media screen and (max-width: 850px)
+  .offersWrap
+    .offerControl
+      opacity: 1
+      width: 6%
+      height: 6vw
+      border-radius: 3vw
+      &:hover
+        background-color: rgba(255, 255, 255, 0.1)
+    .owl-dots
+      .owl-dot
+        width: 10px
+        height: 10px
+@media screen and (max-width: 650px)
+  .offersWrap
+    padding-top: 10px
+    padding-bottom: 20px
+    .offer
+      .content
+        flex-direction: column
+      .img
+        height: 200px
+        width: 100%
+        background-position: center center
+      .inner
+        width: 100%
+        padding: 10px 0 20px
+        h2
+          align-self: flex-start
+    .owl-dots
+      bottom: -1%
+
+@media screen and (max-width: 450px)
+  .offersWrap
+    .offer
+      .inner
+        h2
+          font-size: 5.5rem
+          margin-bottom: 2rem
+        p
+          margin-bottom: 2rem
+        span
+          font-size: 5rem
+          margin-bottom: 3rem
+        button
+          width: 90%
+          margin: 0
+          align-self: center

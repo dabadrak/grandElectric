@@ -1,0 +1,60 @@
+.request1Wrap
+  background: #d7d7d7 url("../img/request1Bg.png") bottom right no-repeat
+  .content
+    padding: 20px 2%
+    display: flex
+    .inner
+      width: 100%
+      max-width: 550px
+      h2
+        text-align: left
+      p
+        font-size: 8rem
+        font-weight: bold
+        margin-bottom: 5rem
+      form#requestForm1
+        width: 80%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        input
+          width: 100%
+          font-size: 4rem
+          padding: 2rem 4rem
+          margin-bottom: 1rem
+          border-radius: 3px
+          border: 1px solid #b3b3b3
+          &.button
+            width: 43%
+            padding: 1rem 4rem
+            font-weight: bold
+          &.invalid
+            box-shadow: 0 0 10px 1px rgba(255, 42, 50, 0.9)
+        textarea
+          font-size: 3.5rem
+          padding: 2rem 4rem
+          margin-bottom: 1rem
+          border-radius: 3px
+          border: 1px solid #b3b3b3
+          font-family: "PT Sans", sans-serif
+          width: 100%
+          height: 30rem
+          resize: vertical
+
+@media screen and (max-width: 1000px)
+  .request1Wrap
+    background-size: 80%
+
+@media screen and (max-width: 850px)
+  .request1Wrap
+    background-size: contain
+    .content
+      flex-direction: column
+      .inner
+        p
+          font-size: 6rem
+        max-width: none
+        form#requestForm1
+          width: 100%
+      .empty
+        height: 30vh

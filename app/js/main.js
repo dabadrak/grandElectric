@@ -163,7 +163,7 @@ $(document).ready(()=> {
   /**
    * Управление модальным окном request
    */
-  const request = (() => {
+  const requestModal = (() => {
     const $requestContainer = $('#requestModal');
     
     $('.requestTrigger').click(() => {
@@ -181,11 +181,30 @@ $(document).ready(()=> {
     })
     });
   
-    new LengthChecker ('#request');
-    $requestContainer
-        .find('input[name="phone"]')
-        .mask('+7 (000) 000-0000')
+    new LengthChecker ('#requestModalForm');
+    $('.requestTel').mask('+7 (000) 000-0000')
   })();
+  
+  /**
+   * Управление секцией offers
+   */
+  const offers = (() => {
+    const $offersCarouselContainer =  $('#offers');
+    $offersCarouselContainer.owlCarousel({
+      items: 1,
+      loop: true,
+      dots: true
+        }
+    );
+    $('#offerNext').click(() => {
+      $offersCarouselContainer.trigger('next.owl.carousel')
+    });
+    $('#offerPrev').click(() => {
+      $offersCarouselContainer.trigger('prev.owl.carousel')
+    });
+    
+  })();
+  
   //Анимированная кнопка заказать
   new BubblyButton();
 });

@@ -1,13 +1,5 @@
 @import fontface
 @import vars
-@import header
-@import offer
-@import services
-@import servicesBig
-@import mobileMenu
-@import guaranties
-@import portfolio
-@import requestModal
 
 *
   box-sizing: border-box
@@ -83,6 +75,14 @@ button
     border-radius: 3px
     border: 1px solid #b3b3b3
     font-family: "PT Sans", sans-serif
+  &__offers
+    border-radius: 50px
+    font-size: 6rem
+    padding: 1rem 15rem
+    font-weight: bold
+    margin-right: 9%
+    &:active
+      transform: scale(0.9)
   &__white
     background-color: #ffffff
     color: $darkFontColor
@@ -182,6 +182,19 @@ button
   left: 0
   z-index: 100
   background-color: rgba(0, 0, 0, 0.85)
+
+
+@import header
+@import offer
+@import services
+@import servicesBig
+@import guaranties
+@import portfolio
+@import offers
+
+@import request
+@import mobileMenu
+@import requestModal
 
 @import keyframes
 @import mw1000
