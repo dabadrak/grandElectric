@@ -3,7 +3,7 @@ section.request1Wrap
     .inner
       h2 Получите расчёт стоимости
       p электромонтажных работ
-      form(action='#' method='get' name='request1')#requestForm1
+      form(action='php/mailer.php' method='post' name='request1')#requestForm1
         input(type='text' placeholder='Ваше имя' name='name')
         input(type='text' placeholder='+7 (___) ___-__-__*' name='phone' required).requestTel
         textarea(name='message' placeholder='Напишите, что нужно сделать (не обязательно)')
