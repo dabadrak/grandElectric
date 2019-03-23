@@ -205,6 +205,31 @@ $(document).ready(()=> {
     
   })();
   
+  /**
+   * Управление секцией about
+   */
+  const about = (() => {
+    const $aboutCarouselContainer =  $('#aboutFeedbacks');
+    $aboutCarouselContainer.owlCarousel({
+          items: 1,
+          loop: true,
+          dots: false,
+          responsive: {
+            600: {
+              items: 2
+            }
+          }
+        }
+    );
+    $('#aboutFeedbacksNext').click(() => {
+      $aboutCarouselContainer.trigger('next.owl.carousel')
+    });
+    $('#aboutFeedbacksPrev').click(() => {
+      $aboutCarouselContainer.trigger('prev.owl.carousel')
+    });
+    
+  })();
+  
   //Анимированная кнопка заказать
   new BubblyButton();
 });

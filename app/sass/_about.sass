@@ -1,0 +1,55 @@
+.aboutWrap
+  background: url("../img/aboutBg.jpg") bottom left no-repeat / cover
+  position: relative
+  .mask
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-color: rgba(0,0,0,0.5)
+  .content
+    .feedBacks
+      position: relative
+    position: relative
+    color: #ffffff
+    padding: 40px 2% 20px
+    h2
+      text-align: left
+      font-family: Tahoma, sans-serif
+      font-size: 9rem
+      margin-bottom: 7rem
+      span
+        font-family: 'PT Sans', sans-serif
+        font-size: 7rem
+    p
+      font-size: 3rem
+      margin-bottom: 6rem
+    figure
+      display: flex
+      padding: 1%
+      align-items: center
+      img
+        width: 30%
+      figcaption
+        padding: 2%
+        width: 70%
+        display: block
+        h3
+          font-size: 5rem
+        span
+          font-size: 4rem
+        p
+          margin-bottom: 0
+    .feedBacksNav
+      +carousel-control
+
+@media screen and (max-width: 850px)
+  .aboutWrap
+    .content
+      h2
+        display: block
+        span
+          display: block
+      .feedBacksNav
+        +carousel-control850
