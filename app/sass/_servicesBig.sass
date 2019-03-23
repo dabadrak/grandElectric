@@ -180,3 +180,17 @@
           flex-direction: column
           justify-content: space-evenly
           align-items: center
+
+@media screen and (max-width: 650px)
+  .servicesBigWrap
+    .servicesBigOther
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: "heading heading"
+      .item
+        height: 40vw
+        &:hover
+          box-shadow: none
+        .mask
+          .heading
+            h3
+              font-size: 4vw
