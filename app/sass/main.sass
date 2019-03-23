@@ -162,6 +162,52 @@ button
   background: url("../img/bgTop.jpg") top right no-repeat
   background-size: cover
 
+.accordion
+  width: 100%
+  h3
+    font-weight: normal
+    text-align: center
+    font-size: 4.8rem
+    line-height: 7rem
+    background-color: #acacac
+    cursor: pointer
+    transition: background-color 200ms
+    margin-bottom: 5px
+    &:hover
+      background-color: #dfdfdf
+    &:active
+      background-color: #acacac
+    &:after
+      content: " +"
+      font-weight: bold
+    &:first-child
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+    &:last-child
+      border-bottom-left-radius: 5px
+      border-bottom-right-radius: 5px
+  h3.ui-accordion-header-active
+    background-color: #dfdfdf
+    &:after
+      content: " -"
+  table
+    width: 100%
+    margin: 0 0
+    line-height: 7rem
+    font-size: 4rem
+    tr:hover>td
+      background-color: #dfdfdf
+    td
+      background-color: #ffffff
+      border-left: 5px solid $darkBgColor
+      border-bottom: 5px solid $darkBgColor
+      text-align: center
+      &:first-child
+        width: 70%
+        border-left: 0
+        text-align: left
+        padding-left: 4rem
+
 #modalPortfolioScreen
   position: fixed
   top: 0
@@ -195,6 +241,7 @@ button
 @import offers
 @import sсhema
 @import about
+@import price
 
 @import request
 @import mobileMenu

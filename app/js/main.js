@@ -100,7 +100,7 @@ $(document).ready(()=> {
   })();
   
   /**
-   * Управление секцией serices
+   * Управление секцией services
    */
   const services = (() => {
     //Аккордионы мини прайсов
@@ -227,7 +227,14 @@ $(document).ready(()=> {
     $('#aboutFeedbacksPrev').click(() => {
       $aboutCarouselContainer.trigger('prev.owl.carousel')
     });
-    
+  })();
+  
+  /**
+   * Управление секцией price
+   */
+  const price = (() => {
+    const $priceAccordion = $('#priceAccordion');
+    new Price($priceAccordion, '../json/price.json');
   })();
   
   //Анимированная кнопка заказать

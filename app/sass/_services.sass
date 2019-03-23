@@ -50,7 +50,6 @@
     top: 0
     left: 0
 
-
 .servicesTabs
   background-color: $darkBgColor
   & #servicesTabs1 .servicesTabContentWrap
@@ -78,46 +77,3 @@
         flex-wrap: wrap
         justify-content: space-between
         width: 49%
-        .accordion__services
-          width: 100%
-          border-top-right-radius: 5px
-          border-top-left-radius: 5px
-          overflow: hidden
-        h3
-          font-weight: normal
-          text-align: center
-          font-size: 4.8rem
-          line-height: 7rem
-          background-color: #acacac
-          cursor: pointer
-          transition: background-color 200ms
-          border-bottom: 5px solid
-          &:hover
-            background-color: #dfdfdf
-          &:active
-            background-color: #acacac
-          &:after
-            content: " +"
-            font-weight: bold
-        h3.ui-accordion-header-active
-          background-color: #dfdfdf
-          &:after
-            content: " -"
-
-      table
-        width: 100%
-        margin: 0 0
-        line-height: 7rem
-        tr:hover>td
-          background-color: #dfdfdf
-        td
-          background-color: #ffffff
-          border-left: 5px solid $darkBgColor
-          border-bottom: 5px solid $darkBgColor
-          text-align: center
-          &:first-child
-            width: 70%
-            border-left: 0
-            text-align: left
-            padding-left: 4rem
-

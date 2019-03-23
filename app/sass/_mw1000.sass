@@ -31,6 +31,21 @@
     .headerContacts
       order: 1
 
+  .accordion
+    h3
+      font-size: 2.5vw
+      line-height: 3vw
+      margin-bottom: 3px
+    table
+      line-height: 3vw
+      font-size: 2vw
+      tr:hover>td
+        background-color: #ffffff
+      td
+        border-left: 3px solid $darkBgColor
+        border-bottom: 3px solid $darkBgColor
+        &:first-child
+          border-left: 0
 
   .servicesWrap
     .servicesPriceNav
@@ -50,22 +65,8 @@
       .servicesTab
         .servicesTabContentWrap
           font-size: 2vw
-          h3
-            font-size: 2.5vw
-            line-height: 3vw
-            border-bottom: 3px solid $darkBgColor
-          table
-            line-height: 3vw
-            tr:hover>td
-              background-color: #ffffff
-            td
-              border-left: 3px solid $darkBgColor
-              border-bottom: 3px solid $darkBgColor
-              &:first-child
-                border-left: 0
           a
             font-size: 2.5vw
-            line-height: 3vw
 
   .servicesBigWrap
     .servicesBigArticle
