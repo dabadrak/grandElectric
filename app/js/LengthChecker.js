@@ -17,13 +17,13 @@ class LengthChecker {
   };
   
   _firstCheck(input) {
-    if (!(input.val().length === 17)) {
+    if (!(input.val().length === 18)) {
       input.addClass('invalid')
     }
-    return input.val().length === 17
+    return input.val().length === 18
   }
   _secondCheck(input) {
-    if (input.val().length === 16) {
+    if (input.val().length === 17) {
       input.removeClass('invalid')
     }
   }
