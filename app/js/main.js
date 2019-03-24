@@ -161,7 +161,7 @@ $(document).ready(()=> {
   })();
   
   /**
-   * Управление модальным окном request
+   * Управление модальным окном и секциями request
    */
   const requestModal = (() => {
     const $requestContainer = $('#requestModal');
@@ -182,6 +182,8 @@ $(document).ready(()=> {
     });
   
     new LengthChecker ('#requestModalForm');
+    new LengthChecker ('#requestForm1');
+    new LengthChecker ('#requestForm2');
     $('.requestTel').mask('+7 (000) 000-0000')
   })();
   

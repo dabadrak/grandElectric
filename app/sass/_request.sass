@@ -1,5 +1,6 @@
-.request1Wrap
-  background: #d7d7d7 url("../img/request1Bg.png") bottom right no-repeat
+.requestWrap
+  &_1
+    background: #d7d7d7 url("../img/request1Bg.png") bottom right no-repeat
   .content
     padding: 20px 2%
     display: flex
@@ -12,7 +13,8 @@
         font-size: 8rem
         font-weight: bold
         margin-bottom: 5rem
-      form#requestForm1
+        color: #343434
+      form
         width: 80%
         display: flex
         flex-direction: column
@@ -40,13 +42,24 @@
           width: 100%
           height: 30rem
           resize: vertical
+  &_2
+    background: #d7d7d7 url("../img/request2Bg.png") bottom left 20% no-repeat / contain
+    .content
+      flex-direction: row-reverse
+      .inner
+        h2
+          font-size: 12rem
+        p
+          font-size: 5.1rem
+        form
+          align-items: flex-end
 
 @media screen and (max-width: 1000px)
-  .request1Wrap
+  .requestWrap
     background-size: 80%
 
 @media screen and (max-width: 850px)
-  .request1Wrap
+  .requestWrap
     background-size: contain
     .content
       flex-direction: column
@@ -54,7 +67,7 @@
         p
           font-size: 6rem
         max-width: none
-        form#requestForm1
+        form
           width: 100%
       .empty
         height: 30vh

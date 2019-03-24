@@ -1,0 +1,10 @@
+section.requestWrap.requestWrap_2
+  .content
+    .inner
+      h2 Оставьте заявку
+      p и мы перезвоним Вам через 5 минут
+      form(action='php/mailer.php' method='post' name='request2')#requestForm2
+        input(type='text' placeholder='Ваше имя' name='name')
+        input(type='text' placeholder='+7 (___) ___-__-__*' name='phone' required).requestTel
+        input(type='submit').button.button__request.button__darkGrey
+    .empty
