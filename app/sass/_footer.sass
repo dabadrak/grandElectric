@@ -1,0 +1,75 @@
+footer.footer
+  background-color: $darkBgColor
+  color: #ffffff
+  padding: 20px 0
+  .content
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    .item
+      width: 33%
+    h3
+      margin-top: 3rem
+      font-size: 6rem
+      margin-bottom: 3rem
+    .contacts
+      font-size: 4rem
+      line-height: 6rem
+      .refs
+        margin-bottom: 3rem
+        a
+          text-decoration: none
+          color: white
+          &:hover
+            text-decoration: underline
+        img
+          height: 4rem
+          width: 4rem
+          margin-right: 0.5rem
+    .logo
+      display: flex
+      flex-direction: column
+      align-items: center
+      background: url("../img/footerLogoGlow.png") center no-repeat / contain
+      h3
+        margin-top: 0
+        font-family: Tahoma, sans-serif
+    .payAndNav
+      font-size: 4rem
+      .pay
+        padding-left: 5rem
+        margin-bottom: 3rem
+      .menu
+        font-size: 6rem
+        list-style-type: none
+        font-weight: bold
+        display: flex
+        flex-wrap: wrap
+        a
+          color: #ffffff
+          text-decoration: none
+          margin-left: 1rem
+          transition: all 100ms
+          &:hover
+            color: #c5c5c5
+
+@media screen and (max-width: 650px)
+  footer.footer
+    .content
+      h3
+        margin-top: 0
+      .item
+        width: 49%
+      .logo
+        margin-top: 3rem
+        order: 1
+        width: 100%
+      .payAndNav
+        .menu
+          font-size: 5rem
+
+@media screen and (max-width: 450px)
+  footer.footer
+    .content
+      .item
+        width: 100%

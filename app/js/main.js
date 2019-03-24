@@ -184,7 +184,7 @@ $(document).ready(()=> {
     new LengthChecker ('#requestModalForm');
     new LengthChecker ('#requestForm1');
     new LengthChecker ('#requestForm2');
-    $('.requestTel').mask('+7 (000) 000-0000')
+    $('.requestTel').mask('+7 (000) 000-00-00')
   })();
   
   /**
