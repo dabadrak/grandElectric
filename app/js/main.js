@@ -28,13 +28,20 @@ $(document).ready(()=> {
     let lastScrollTop = 0;
     $(window).scroll(() => {
       let scrollTop = $(this).scrollTop();
-      if (scrollTop > lastScrollTop) {
+      if (scrollTop > lastScrollTop && scrollTop < lastScrollTop + 110 && scrollTop > lastScrollTop + 20) {
         $header.hide('slide', {direction: 'up'}, 200);
       }
       if (scrollTop < lastScrollTop){
         $header.show('slide', {direction: 'up'}, 200);
       }
       lastScrollTop = scrollTop;
+    });
+    
+    //Показывает меню при поднятии мышки к верху страницы
+    $(document).mousemove(() => {
+      if (event.screenY < 150) {
+        $header.show('slide', {direction: 'up'}, 200);
+      }
     });
     
     //Разворачивает субменю
@@ -76,6 +83,7 @@ $(document).ready(()=> {
     $('#mobileMenuBtn').click(() => {
       $mobileMenuSideBar.show('slide', {direction: 'right'}, 200);
       $mobileMenuContentMask.fadeIn();
+      $('#header').hide('slide', {direction: 'up'}, 200);
     });
 
     //Скрыть меню при нажатии на кнопку закрыть
@@ -231,14 +239,12 @@ $(document).ready(()=> {
     });
   })();
   
-  /**
-   * Управление секцией price
-   */
-  const price = (() => {
-    const $priceAccordion = $('#priceAccordion');
-    new Price($priceAccordion, '../json/price.json');
-  })();
+  //Прайс из JSON
+  new Price($('#priceAccordion'), '../json/price.json');
   
   //Анимированная кнопка заказать
   new BubblyButton();
+  
+  //Появляющаяся при прокрутке кнопка наверх и заказть звонок
+  new RunBacker('.callbackWrapper', '.callbackUp');
 });

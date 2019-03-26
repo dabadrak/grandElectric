@@ -10,16 +10,6 @@
   },
   {
     "category": "проводка в квартире и доме",
-    "id": 102,
-    "name": "Электропроводка в трёхкомнатной квартире",
-    "done": "разработан проект электромонтажа, собран щит",
-    "price": "120 000",
-    "duration": 21,
-    "img": ["../img/portfolio/wiring/2/1.jpg", "../img/portfolio/wiring/2/2.jpg", "../img/portfolio/wiring/2/3.jpg",
-      "../img/portfolio/wiring/2/4.jpg"]
-  },
-  {
-    "category": "проводка в квартире и доме",
     "id": 103,
     "name": "Электропроводка в трёхкомнатной квартире",
     "done": "разработан проект электромонтажа, собран щит",
@@ -50,6 +40,16 @@
     "duration": 21,
     "img": ["../img/portfolio/wiring/5/1.jpg", "../img/portfolio/wiring/5/2.jpg", "../img/portfolio/wiring/5/3.jpg",
       "../img/portfolio/wiring/5/4.jpg", "../img/portfolio/wiring/5/5.jpg"]
+  },
+  {
+    "category": "проводка в квартире и доме",
+    "id": 102,
+    "name": "Электропроводка в трёхкомнатной квартире",
+    "done": "разработан проект электромонтажа, собран щит",
+    "price": "120 000",
+    "duration": 21,
+    "img": ["../img/portfolio/wiring/2/1.jpg", "../img/portfolio/wiring/2/2.jpg", "../img/portfolio/wiring/2/3.jpg",
+      "../img/portfolio/wiring/2/4.jpg"]
   },
   {
     "category": "сборка щитов",

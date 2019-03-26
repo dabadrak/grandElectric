@@ -96,7 +96,7 @@
   top: 47%
   width: 3%
   height: 3vw
-  z-index: 999
+  z-index: 997
   cursor: pointer
   transition: background-color 300ms, transform 500ms
   border-radius: 1.5vw
@@ -190,3 +190,12 @@
     border-radius: 3vw
     &:hover
       background-color: rgba(0, 0, 0, 0.3)
+
+@media screen and (max-width: 450px)
+  .pm-content
+    .pm-footer
+      .pm-footer-bottom
+        .pm-footer-inner
+          .pm-price, .pm-duration, .pm-another
+            span
+              display: block

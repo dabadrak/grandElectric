@@ -71,11 +71,11 @@ class Portfolio {
     this.carouselContainer = $('<div class="pm-carousel-container owl-carousel"/>');
     const $footer = $('<div class="pm-footer"/>');
     const $info = $('<div class="pm-info"/>');
-    this.nameContainer = $(`<h3 class="pm-name">Объект: <span></span></h3>`);
-    this.doneContainer = $(`<h4 class="pm-done">Сделано: <span></span></h4>`);
+    this.nameContainer = $(`<h3 class="pm-name">Объект: <span/></h3>`);
+    this.doneContainer = $(`<h4 class="pm-done">Сделано: <span/></h4>`);
     this.footerBottomContainer = $('<div class="pm-footer-bottom"/>');
-    this.priceContainer = $(`<div class="pm-price">стоимотсь: <span></span> &#8381;</div>`);
-    this.durationContainer = $(`<div class="pm-duration">срок: <span class="pm-duration-number"></span> <span class="pm-duration-word"></span></div>`);
+    this.priceContainer = $(`<div class="pm-price">стоимотсь: <span/></div>`);
+    this.durationContainer = $(`<div class="pm-duration">срок: <span class="pm-duration"/></div>`);
     this.anotherBtn = $('<div class="pm-another">показать следующий</div>');
     this.closeBtn = $('<svg version="1.1" id="Capa_1" viewBox="0 0 212.982 212.982" class="pm-close"><g><path' +
         ' fill="#ffffff" style="fill-rule:evenodd; clip-rule:evenodd;" d="M131.804,106.491l75.936-75.936c6.99-6.99,' +
@@ -149,14 +149,13 @@ class Portfolio {
     }
     if (items[idx].price !== 0) {
       this.priceContainer.show();
-      this.priceContainer.find('span').text(items[idx].price);
+      this.priceContainer.find('span').html(items[idx].price + "&nbsp;&#8381;");
     } else {
       this.priceContainer.hide();
     }
     if (items[idx].duration !== 0) {
       this.durationContainer.show();
-      this.durationContainer.find('span.pm-duration-number').text(items[idx].duration);
-      this.durationContainer.find('span.pm-duration-word').text(this._getEnding(items[idx].duration));
+      this.durationContainer.html(`<span>${items[idx].duration}&nbsp;${this._getEnding(items[idx].duration)}</span>`);
     } else {
       this.durationContainer.hide();
     }
