@@ -1,12 +1,78 @@
 .offerWrap
-  height: calc(100vh)
-  display: flex
-  align-items: center
-  h2
-    color: #ffffff
-    font-weight: bold
-    font-size: 14.6rem
-    line-height: 13rem
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
-    span
-      font-size: 0.81em
+  height: calc(100vh - 130px)
+  .content
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    .inner
+      position: relative
+      top: 30px
+      color: #ffffff
+      padding: 2% 5% 4%
+      background-color: rgba(71, 71, 71, 0.31)
+      border-radius: 8px
+      display: flex
+      flex-direction: column
+      align-items: center
+      &:hover .requestTrigger
+        animation: wobble-hor-bottom 0.8s both
+      h2
+        font-weight: bold
+        font-size: 11.4rem
+        line-height: 13rem
+        span
+          font-size: 0.83em
+      >span
+        font-size: 5.7rem
+        padding-bottom: 2rem
+      .timerContainer
+        margin-top: 2rem
+      .buttons
+        width: 100%
+        display: flex
+        justify-content: space-evenly
+
+@media screen and (max-width: 850px)
+  .offerWrap
+    .content
+      .inner
+        h2
+          font-size: 10.5rem
+        >span
+          font-size: 5.3rem
+
+@media screen and (max-width: 650px)
+  .offerWrap
+    .content
+      .inner
+        h2
+          font-size: 6.8rem
+          line-height: normal
+        >span
+          font-size: 4rem
+          text-align: center
+        .timerContainer
+          display: none
+        .buttons
+          flex-direction: column
+          a, button
+            width: 100%
+@media screen and (max-width: 450px)
+  .offerWrap
+    .content
+      .inner
+        h2
+          font-size: 5rem
+        >span
+          font-size: 4rem
+          text-align: center
+          padding-bottom: 0
+        .timerContainer
+          display: none
+        .buttons
+          flex-direction: column
+          a, button
+            width: 100%
+            font-size: 4rem
+            margin-top: 1rem
