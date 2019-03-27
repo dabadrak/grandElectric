@@ -142,13 +142,19 @@ $(document).ready(()=> {
    * Управление секцией sericesBig
    */
   const servicesBig = (() => {
+  
+  $('.servicesCarousel').owlCarousel({
+    autoplay: true,
+    nav: false,
+    dots: false,
+    items: 1,
+    loop: true,
+    margin: 1,
+      }
+  );
     /**
-     * Вызов потфолио во всплывающем окне
+     * Эффекты в servicesOther
      */
-    $('.jsPortfolioModalTrigger').click((e) => {
-      new Portfolio('../json/portfolioModal.json', '#modalPortfolioScreen', true, e.target.dataset.category);
-    });
-    
     const $servicesBigOther = $('.servicesBigOther');
     if ($(window).width() < 850) {
       $servicesBigOther.on('click', '.item', function () {
@@ -238,6 +244,11 @@ $(document).ready(()=> {
       $aboutCarouselContainer.trigger('prev.owl.carousel')
     });
   })();
+  
+  //Вызов портфолио
+  $('.jsPortfolioModalTrigger').click((e) => {
+    new Portfolio('../json/portfolioModal.json', '#modalPortfolioScreen', true, e.target.dataset.category);
+  });
   
   //Прайс из JSON
   new Price($('#priceAccordion'), '../json/price.json');
