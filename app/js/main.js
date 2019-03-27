@@ -181,7 +181,8 @@ $(document).ready(()=> {
     const $requestContainer = $('#requestModal');
     
     $('.requestTrigger').click(() => {
-      $requestContainer.addClass('active');
+      $requestContainer.addClass('active')
+          .find('textarea[name="message"]').val(event.target.dataset.message);
       $('html').css('overflow', 'hidden');
     });
     $($requestContainer).click(() => {

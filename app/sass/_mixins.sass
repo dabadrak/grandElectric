@@ -1,29 +1,27 @@
 =carousel-control
   position: absolute
   top: 47%
-  width: 3%
-  height: 3vw
+  width: 30px
+  height: 30px
   z-index: 5
   cursor: pointer
-  transition: background-color 300ms, transform 500ms
-  border-radius: 1.5vw
+  transition: background-color 300ms, transform 500ms, opacity 200ms
+  border-radius: 15px
   &__next
-    left: 5px
-    background: url('../img/chevronLeft.png') rgba(0, 0, 0, 0.3) center left 48% no-repeat
+    right: 5px
+    background: url('../img/chevronRight.png') rgba(255, 255, 255, 0.3) center no-repeat
     background-size: 25%
   &__prev
-    right: 5px
-    background: url('../img/chevronRight.png') rgba(0, 0, 0, 0.3) center right 48% no-repeat
+    left: 5px
+    background: url('../img/chevronLeft.png') rgba(255, 255, 255, 0.3) center no-repeat
     background-size: 25%
   &:hover
-    background-color: rgba(0, 0, 0, 0.8)
+    background-color: rgba(255, 255, 255, 0.5)
   &:active
     transform: scale(1.2)
-    background-color: rgba(117, 117, 117, 0)
+    background-color: rgba(0, 0, 0, 0)
 
 =carousel-control850
-  width: 6%
-  height: 6vw
-  border-radius: 3vw
+  opacity: 1
   &:hover
-    background-color: rgba(0, 0, 0, 0.3)
+    background-color: rgba(255, 255, 255, 0.3)
