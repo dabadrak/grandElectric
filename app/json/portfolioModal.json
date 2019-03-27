@@ -1,6 +1,19 @@
 [
   {
     "category": "проводка в квартире и доме",
+    "id": 199,
+    "name": "",
+    "done": "",
+    "price": 0,
+    "duration": 0,
+    "img": ["../img/portfolio/wiring/all/1.jpg", "../img/portfolio/wiring/all/2.jpg",
+      "../img/portfolio/wiring/all/3.jpg", "../img/portfolio/wiring/all/4.jpg", "../img/portfolio/wiring/all/5.jpg",
+      "../img/portfolio/wiring/all/6.jpg", "../img/portfolio/wiring/all/7.jpg", "../img/portfolio/wiring/all/8.jpg",
+      "../img/portfolio/wiring/all/9.jpg", "../img/portfolio/wiring/all/10.jpg", "../img/portfolio/wiring/all/11.jpg",
+      "../img/portfolio/wiring/all/12.jpg"]
+  },
+  {
+    "category": "проводка в квартире и доме",
     "id": 101,
     "name": "Электропроводка в трёхкомнатной квартире",
     "done": "разработан проект электромонтажа, проложены кабели, собран щит, смонтировно освещение",

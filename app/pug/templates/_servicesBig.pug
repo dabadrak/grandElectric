@@ -1,103 +1,156 @@
 section.servicesBigWrap
-  article.servicesBigArticle.servicesBigArticle__housesAppartments#housesAppartments
-    h2 Выполняем под ключ
+  h2 Специальное предложение, цена не изменится:
+  article.servicesBigArticle.servicesBigArticle__servicesApart#appartment
     .content
-      .left
-        .top
-          h3 Проводка в квартире и доме
-          h4 Включены работы:
-          ol
-            li Разработка исполнительных схем
-            li Штробление, бурение подрозетников
-            li Прокладка кабелей
-            li Сборка щита
-        .bottom
-          .infographics
-              figure
-                img(src='../img/specialistIcon.png')
-                figcaption
-                  h5 Выполнено:
-                  span.number 24
-                  span.label объекта
-              figure
-                img(src='../img/moneyIcon.png')
-                figcaption
-                  h5 Цена от:
-                  span.number.number__price 1500
-                  span.label &#8381;/м.кв
-          .buttons
-            a(href='#prices').button.button__servicesBig.button__grey Цены
-            button(data-category='проводка в квартире и доме').button.button__servicesBig.button__grey.jsPortfolioModalTrigger Портфолио
-            button.button.button__servicesBig.button__bubblyButton.requestTrigger Заказть
-      .right.img1
-        .imgMask(data-category='проводка в квартире и доме').jsPortfolioModalTrigger
-          span  Посмотреть другие работы
+      .col1
+        .heading
+          h3 Проводка в&nbsp;квартире до&nbsp;32&nbsp;М<sup>2</sup>, закажите по фиксированной цене
+        .servicesCarouselContainer
+          .servicesCarousel.owl-carousel
+            img(src='../img/servicesApartCarousel1.jpg' alt='Проводка в квартире')
+            img(src='../img/servicesApartCarousel2.jpg' alt='Электрика в новостройке')
+            img(src='../img/servicesApartCarousel3.jpg' alt='Электромонтажные работы')
+          .imgMask(data-category='проводка в квартире и доме').jsPortfolioModalTrigger
+            span  Посмотреть другие работы
+      .col2
+        article
+          h3 Работы:
+          ul
+            li Сборка и монтаж щита 12 модулей
+            li Защита УЗО от поражения током
+            li Штробление стен 16 м
+            li Прокладка кабеля в гофре и штробе 115м
+            li Устройство подрозетников 19 шт
+            li Установка розеток 12 шт
+            li Установка ТВ и Интернет розеток 2 шт
+            li Установка выключателей 5 шт
+            li Установка патронов 5 шт
+        article
+          h3 Материалы:
+          ul
+            li Автоматика ABB (Италия)
+            li Негорючие кабели ВВГнг-LS ГОСТ (Россия)
+            li ТВ кабель CAVEL (Италия)
+            li Подрозетники и коробки Hegel (Россия)
+            li Гофро-труба DKC (Россия)
+            li Клеммы WAGO (Германия)
+            li Патроны, лампочки (Россия)
+      .col3
+        .item
+          span.label Срок выполнения:&#8194;
+          span.value 3 дня
+        .item
+          span.label Стоимость работ:&#8194;
+          span.value 24 032 &#8381;
+        .item
+          span.label Стоимость материалов:&#8194;
+          span.value 11 913 &#8381;
+        .item
+          span.bigLabel Общая стомость:&#8194;
+          span.bigValue 35 945 &#8381;
+        button.button.button__servicesBig2.button__red.requestTrigger заказать
 
-  article.servicesBigArticle.servicesBigArticle__woodenHouses#woodenHouses
+  article.servicesBigArticle.servicesBigArticle__servicesHouse#house
     .content
-      .left
-        .top
-          h3 Проводка в деревянном доме
-          h4 Включены работы:
-          ol
-            li Разработка исполнительных схем
-            li Штробление, бурение подрозетников
-            li Прокладка кабелей
-            li Сборка щита
-        .bottom
-          .infographics
-              figure
-                img(src='../img/specialistIcon.png')
-                figcaption
-                  h5 Выполнено:
-                  span.number 24
-                  span.label объекта
-              figure
-                img(src='../img/moneyIcon.png')
-                figcaption
-                  h5 Цена от:
-                  span.number.number__price 1500
-                  span.label &#8381;/м.кв
-          .buttons
-            a(href='#prices').button.button__servicesBig.button__white Цены
-            button(data-category='проводка в квартире и доме').button.button__servicesBig.button__white.jsPortfolioModalTrigger Портфолио
-            button.button.button__servicesBig.button__bubblyButton.animate.requestTrigger Заказть
-      .right.img2
-        .imgMask(data-category='проводка в квартире и доме').jsPortfolioModalTrigger
-          span  Посмотреть другие работы
-  article.servicesBigArticle.servicesBigArticle__commercial#commercial
-    .content
-      .left
-        .top
-          h3.noMargin Коммерческие объекты
-          h5 офис, магазин, склад, производство
-          h4 Включены работы:
-          ol
-            li Разработка исполнительных схем
-            li Штробление, бурение подрозетников
-            li Прокладка кабелей
-            li Сборка щита
-        .bottom
-          .infographics
-              figure
-                img(src='../img/specialistIcon.png')
-                figcaption
-                  h5 Выполнено:
-                  span.number 24
-                  span.label объекта
-              figure
-                img(src='../img/moneyIcon.png')
-                figcaption
-                  h5 Цена от:
-                  span.number.number__price 1500
-                  span.label &#8381;/м.кв
-          .buttons
-            a(href='#prices').button.button__servicesBig.button__white Цены
-            button(data-category='коммерческие объекты').button.button__servicesBig.button__white.jsPortfolioModalTrigger Портфолио
-            button.button.button__servicesBig.button__bubblyButton.animate.requestTrigger Заказть
-      .right.img3
-        .imgMask(data-category='коммерческие объекты').jsPortfolioModalTrigger
-          span  Посмотреть другие работы
+      .col1
+        .heading
+          h3 Проводка в&nbsp;доме до&nbsp;80&nbsp;М<sup>2</sup>, закажите по фиксированной цене
+        .servicesCarouselContainer
+          .servicesCarousel.owl-carousel
+            img(src='../img/servicesHouseCarousel1.jpg' alt='Проводка в квартире')
+            img(src='../img/servicesHouseCarousel2.jpg' alt='Электрика в новостройке')
+            img(src='../img/servicesHouseCarousel3.jpg' alt='Электромонтажные работы')
+          .imgMask(data-category='проводка в квартире и доме').jsPortfolioModalTrigger
+            span  Посмотреть другие работы
+      .col2
+        article
+          h3 Работы:
+          ul
+            li Сборка и монтаж щита 36 модулей
+            li Сборка и монтаж слаботочного щита
+            li Защита УЗО от поражения током
+            li Штробление стен 56м
+            li Прокладка кабеля в гофре и штробе 287м
+            li Устройство подрозетников 42шт
+            li Установка ТВ и Интернет розеток 6шт
+            li Установка выключателей 12шт
+            li Установка патронов 12шт
+            li Выводы под котёл, бойлер, циркуляционные насосы
+        article
+          h3 Материалы:
+          ul
+            li Автоматика ABB (Италия)
+            li Негорючие кабели ВВГнг-LS ГОСТ (Россия)
+            li ТВ кабель CAVEL (Италия)
+            li Подрозетники и коробки Hegel (Россия)
+            li Гофро-труба DKC (Россия)
+            li Клеммы WAGO (Германия)
+            li Патроны, лампочки (Россия)
+      .col3
+        .item
+          span.label Срок выполнения:&#8194;
+          span.value 5 дней
+        .item
+          span.label Стоимость работ:&#8194;
+          span.value 71 122 &#8381;
+        .item
+          span.label Стоимость материалов:&#8194;
+          span.value 24 997 &#8381;
+        .item
+          span.bigLabel Общая стомость:&#8194;
+          span.bigValue 96 119 &#8381;
+        button.button.button__servicesBig2.button__red.requestTrigger заказать
+
+    article.servicesBigArticle.servicesBigArticle__servicesOffice#office
+      .content
+        .col1
+          .heading
+            h3 Проводка в&nbsp;офисе до&nbsp;40&nbsp;М<sup>2</sup>, закажите по фиксированной цене
+          .servicesCarouselContainer
+            .servicesCarousel.owl-carousel
+              img(src='../img/servicesOfficeCarousel1.jpg' alt='Проводка в квартире')
+              img(src='../img/servicesOfficeCarousel2.jpg' alt='Электрика в новостройке')
+              img(src='../img/servicesOfficeCarousel3.jpg' alt='Электромонтажные работы')
+            .imgMask(data-category='коммерческие объекты').jsPortfolioModalTrigger
+              span  Посмотреть другие работы
+        .col2
+          article
+            h3 Работы:
+            ul
+              li Установка автоматов
+              li Защита УЗО от поражения током
+              li Прокладка кабелей за подвесным потолком и в кабель-каналах 140 м
+              li Установка розеток в кабель-канал 8 шт
+              li Установка Интернет розеток в кабель-канал 2 шт
+              li Установка выключателей 2 шт
+              li Установка светильников в подвесной потолок 8 шт
+          article
+            h3 Материалы:
+            ul
+              li Автоматика ABB (Италия)
+              li Негорючие кабели ВВГнг-LS ГОСТ (Россия)
+              li Интернет-кабель UTP-5e (Италия)
+              li Офисный кабель-канал Legrand (Франция)
+              li Розетки выключатели в кабель-канал Legrand (Франция)
+              li Коробки рапределительные Hegel (Россия)
+              li Гофро-труба DKC (Россия)
+              li Клеммы WAGO (Германия)
+              li Светильники диодные JazzWay (Россия)
+        .col3
+          .item
+            span.label Срок выполнения:&#8194;
+            span.value 3 дня
+          .item
+            span.label Стоимость работ:&#8194;
+            span.value 19 013 &#8381;
+          .item
+            span.label Стоимость материалов:&#8194;
+            span.value 26 030 &#8381;
+          .item
+            span.bigLabel Общая стомость:&#8194;
+            span.bigValue 45 043 &#8381;
+          button.button.button__servicesBig2.button__red.requestTrigger заказать
+
   article.servicesBigOther#servicesOther
       h2 отдельные улслуги:
       .item.item__sockets

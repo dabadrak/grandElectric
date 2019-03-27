@@ -62,6 +62,15 @@ button
     width: 32%
     line-height: 8rem
     border-radius: 4rem
+  &__servicesBig2
+    margin: 1rem 0
+    line-height: 8rem
+    border-radius: 8rem
+    width: 100%
+    text-transform: uppercase
+    &:active
+      transform: scale(0.95)
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3)
     &:active
       transform: scale(0.9)
       background-color: darken(#595959, 5%)
@@ -108,10 +117,11 @@ button
     background-color: #ff7c5b
     color: #ffffff
     font-weight: bold
+    box-shadow: 0 0 10px 1px rgba(252, 107, 107, 0.7)
     &:hover
-      background-color: #ff8f59
+      background-color: #fc6b6b
     &:active
-      background-color: #bd5f47
+      background-color: darken(#fc6b6b, 5%)
   &__transparent
     background-color: transparent
     border: 1px solid #ffffff
@@ -238,11 +248,11 @@ button
   z-index: 100
   background-color: rgba(0, 0, 0, 0.85)
 
-
 @import header
 @import offer
 @import services
 @import servicesBig
+@import servicesBigOther
 @import guaranties
 @import portfolio
 @import offers
