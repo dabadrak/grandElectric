@@ -1,5 +1,5 @@
 .offerWrap
-  height: calc(100vh - 130px)
+  height: calc(100vh - 125px)
   .content
     height: 100%
     display: flex
@@ -19,13 +19,14 @@
         animation: wobble-hor-bottom 0.8s both
       h2
         font-weight: bold
-        font-size: 11.4rem
-        line-height: 13rem
-        span
+        font-size: 11.1rem
+        line-height: 11rem
+        .span1
           font-size: 0.83em
-      >span
-        font-size: 5.7rem
-        padding-bottom: 2rem
+        .span2
+          font-size: 0.45em
+          font-weight: normal
+          padding-bottom: 2rem
       .timerContainer
         margin-top: 2rem
       .buttons
@@ -39,8 +40,6 @@
       .inner
         h2
           font-size: 10.5rem
-        >span
-          font-size: 5.3rem
 
 @media screen and (max-width: 650px)
   .offerWrap
@@ -49,9 +48,8 @@
         h2
           font-size: 6.8rem
           line-height: normal
-        >span
-          font-size: 4rem
-          text-align: center
+          span
+            text-align: center
         .timerContainer
           display: none
         .buttons
@@ -64,9 +62,6 @@
       .inner
         h2
           font-size: 5rem
-        >span
-          font-size: 4rem
-          text-align: center
           padding-bottom: 0
         .timerContainer
           display: none

@@ -1,6 +1,6 @@
 section.servicesBigWrap
   h2 Специальное предложение, цена не изменится:
-  article.servicesBigArticle.servicesBigArticle__servicesApart#appartment
+  article.servicesBigArticle.servicesBigArticle__servicesApart
     .content
       .col1
         .heading
@@ -48,9 +48,9 @@ section.servicesBigWrap
         .item
           span.bigLabel Общая стомость:&#8194;
           span.bigValue 35 945 &#8381;
-        button(data-message="Проводка в квартире до 32 м.кв по фиксированной цене").button.button__servicesBig2.button__red.requestTrigger заказать
+        button(data-message="Проводка в квартире до 32 м.кв по фиксированной цене").button.button__servicesBig2.button__red.requestTrigger#house заказать
 
-  article.servicesBigArticle.servicesBigArticle__servicesHouse#house
+  article.servicesBigArticle.servicesBigArticle__servicesHouse
     .content
       .col1
         .heading
@@ -99,9 +99,9 @@ section.servicesBigWrap
         .item
           span.bigLabel Общая стомость:&#8194;
           span.bigValue 96 119 &#8381;
-        button(data-message="Проводка в доме до 80 м.кв по фиксированной цене").button.button__servicesBig2.button__red.requestTrigger заказать
+        button(data-message="Проводка в доме до 80 м.кв по фиксированной цене").button.button__servicesBig2.button__red.requestTrigger#office заказать
 
-    article.servicesBigArticle.servicesBigArticle__servicesOffice#office
+    article.servicesBigArticle.servicesBigArticle__servicesOffice
       .content
         .col1
           .heading
@@ -133,7 +133,7 @@ section.servicesBigWrap
               li Офисный кабель-канал Legrand (Франция)
               li Розетки выключатели в кабель-канал Legrand (Франция)
               li Коробки рапределительные Hegel (Россия)
-              li Гофро-труба DKC (Россия)
+              li#servicesOther Гофро-труба DKC (Россия)
               li Клеммы WAGO (Германия)
               li Светильники диодные JazzWay (Россия)
         .col3
@@ -151,7 +151,7 @@ section.servicesBigWrap
             span.bigValue 45 043 &#8381;
           button(data-message="Проводка в офисе до 40 м.кв по фиксированной цене").button.button__servicesBig2.button__red.requestTrigger заказать
 
-  article.servicesBigOther#servicesOther
+  article.servicesBigOther
       h2 отдельные улслуги:
       .item.item__sockets
         .mask
@@ -188,7 +188,7 @@ section.servicesBigWrap
       .item.item__strocking
         .mask
           .heading
-            h3 Штробление
+            h3 Штробление и бурение
           .buttons
             a(href='#prices').button.button__servicesOther.button__transparent Цены
             button(data-category='штробление').button.button__servicesOther.button__transparent.jsPortfolioModalTrigger Фото

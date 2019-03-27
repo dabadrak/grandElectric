@@ -7,14 +7,21 @@ $(document).ready(()=> {
     //Создание меню
     const menu = new Menu('mainMenu',
         [
-          new SubMenu('Услуги', '#servicesTabs', 'mainMenuSub', 'mainMenuSubLi', [
-            new MenuItem('Проводка в квартире и доме', '#housesAppartments'),
-            new MenuItem('Проводка в деревянном доме', '#woodenHouses'),
-            new MenuItem('Коммерческие объекты', '#commercial'),
-            new MenuItem('Разные', '#servicesOther'),
+          new SubMenu('Услуги', '#servicesAnchor', 'mainMenuSub', 'mainMenuSubLi', [
+            new MenuItem('Электрика в городской квартире', '#appartment'),
+            new MenuItem('Электрика в загородном доме', '#house'),
+            new MenuItem('Электрика для бизнеса', '#office'),
+            new MenuItem('Розетки и выключатели', '#servicesOther'),
+            new MenuItem('Щитовое оборудование', '#servicesOther'),
+            new MenuItem('Освещение', '#servicesOther'),
+            new MenuItem('Прокладка кабелей', '#servicesOther'),
+            new MenuItem('Штробление и бурение', '#servicesOther'),
+            new MenuItem('Кабель-каналы', '#servicesOther'),
+            new MenuItem('Установка техники', '#servicesOther'),
+            new MenuItem('Тёплый пол', '#servicesOther'),
           ]),
           new MenuItem('Цены', '#prices'),
-          new MenuItem('Наши&nbsp;работы', '#portfolio'),
+          new MenuItem('Наши&nbsp;работы', '#portfolioAnchor'),
           new MenuItem('Отзывы', '#about'),
           new MenuItem('Контакты', '#footer'),
         ]
@@ -62,13 +69,20 @@ $(document).ready(()=> {
     const mobileMenu = new Menu('mobileMenu',
         [
           new SubMenu('Услуги', '#', 'mobileMenuSub', 'mobileMenuSubLi', [
-            new MenuItem('Проводка в квартире и доме', '#housesAppartments'),
-            new MenuItem('Проводка в деревянном доме', '#woodenHouses'),
-            new MenuItem('Коммерческие объекты', '#commercial'),
-            new MenuItem('Разные', '#servicesOther'),
+            new MenuItem('Проводка в квартире и доме', '#appartment'),
+            new MenuItem('Проводка в деревянном доме', '#house'),
+            new MenuItem('Коммерческие объекты', '#office'),
+            new MenuItem('Розетки и выключатели', '#servicesOther'),
+            new MenuItem('Щитовое оборудование', '#servicesOther'),
+            new MenuItem('Освещение', '#servicesOther'),
+            new MenuItem('Прокладка кабелей', '#servicesOther'),
+            new MenuItem('Штробление и бурение', '#servicesOther'),
+            new MenuItem('Кабель-каналы', '#servicesOther'),
+            new MenuItem('Установка техники', '#servicesOther'),
+            new MenuItem('Тёплый пол', '#servicesOther'),
           ]),
-          new MenuItem('Цены', '#price'),
-          new MenuItem('Наши&nbsp;работы', '#portfolio'),
+          new MenuItem('Цены', '#prices'),
+          new MenuItem('Наши&nbsp;работы', '#portfolioAnchor'),
           new MenuItem('Отзывы', '#about'),
           new MenuItem('Контакты', '#footer'),
         ]
@@ -182,7 +196,8 @@ $(document).ready(()=> {
     
     $('.requestTrigger').click(() => {
       $requestContainer.addClass('active')
-          .find('textarea[name="message"]').val(event.target.dataset.message);
+          .find('textarea[name="message"]')
+          .val(event.target.dataset.message);
       $('html').css('overflow', 'hidden');
     });
     $($requestContainer).click(() => {
@@ -190,7 +205,7 @@ $(document).ready(()=> {
         $requestContainer.removeClass('active');
         $('html').css('overflow', 'auto');
       }
-    $('#requestClose').click(() => {
+    $requestContainer.on('click', '#requestClose', () => {
       $requestContainer.removeClass('active');
       $('html').css('overflow', 'auto');
     })
