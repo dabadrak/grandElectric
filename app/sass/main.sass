@@ -54,62 +54,6 @@ button
   border-radius: 5px
   transition: all ease-in 0.1s, box-shadow ease-in 0.15s
   cursor: pointer
-  &__header
-    border-radius: 20px
-    font-size: 4rem
-    font-weight: bold
-    width: 200px
-    padding: 1rem 0
-  &__offer
-    font-size: 5rem
-    font-weight: bold
-    margin-top: 4rem
-    padding: 2rem 6rem
-    border-radius: 8rem
-    text-transform: uppercase
-    letter-spacing: 0.2rem
-    text-decoration: none
-    text-align: center
-  &__services
-    width: 49.5%
-    border-top-left-radius: 0
-    border-top-right-radius: 0
-  &__servicesBig
-    width: 32%
-    line-height: 8rem
-    border-radius: 4rem
-  &__servicesBig2
-    margin: 1rem 0
-    line-height: 8rem
-    border-radius: 8rem
-    width: 100%
-    text-transform: uppercase
-    &:active
-      transform: scale(0.95)
-      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3)
-    &:active
-      transform: scale(0.9)
-      background-color: darken(#595959, 5%)
-      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3)
-  &__servicesOther
-    width: 80%
-    height: 26%
-    &:active
-      transform: scale(0.9)
-      background-color: darken(#595959, 5%)
-      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3)
-  &__request
-    border-radius: 3px
-    border: 1px solid #b3b3b3
-    font-family: "PT Sans", sans-serif
-  &__offers
-    border-radius: 50px
-    font-size: 6rem
-    padding: 1rem 15rem
-    font-weight: bold
-    margin-right: 9%
-    &:active
-      transform: scale(0.9)
   &__white
     background-color: #ffffff
     color: $darkFontColor
@@ -143,7 +87,7 @@ button
       background-color: darken(#fc6b6b, 5%)
   &__transparent
     background-color: rgba(0,0,0,0)
-    border: 3px solid #ffffff
+    border: 1px solid #ffffff
     color: #ffffff
     transition: background-color 200ms
     &:hover
@@ -189,6 +133,61 @@ button
       &:after
         display: block
         animation: bottomBubbles ease-in-out 0.75s forwards
+  &__header
+    border-radius: 20px
+    font-size: 4rem
+    font-weight: bold
+    width: 200px
+    padding: 1rem 0
+  &__offer
+    font-size: 5rem
+    font-weight: bold
+    margin-top: 4rem
+    padding: 2rem 6rem
+    border-radius: 8rem
+    border: 3px solid #ffffff
+    text-transform: uppercase
+    letter-spacing: 0.2rem
+    text-decoration: none
+    text-align: center
+  &__services
+    width: 49.5%
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+  &__servicesBig
+    margin: 1rem 0
+    line-height: 8rem
+    border-radius: 8rem
+    width: 100%
+    text-transform: uppercase
+    &:active
+      transform: scale(0.95)
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3)
+    &:active
+      transform: scale(0.9)
+      background-color: darken(#595959, 5%)
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3)
+  &__servicesOther
+    width: 80%
+    height: 26%
+    line-height: normal
+    padding: 0
+    &:active
+      transform: scale(0.9)
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3)
+  &__request
+    border-radius: 3px
+    border: 1px solid #b3b3b3
+    font-family: "PT Sans", sans-serif
+  &__offers
+    border-radius: 50px
+    font-size: 6rem
+    padding: 1rem 15rem
+    font-weight: bold
+    margin-right: 9%
+    &:active
+      transform: scale(0.9)
+
 
 .bgTop
   width: 100%

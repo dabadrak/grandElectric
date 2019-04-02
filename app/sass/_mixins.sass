@@ -5,7 +5,7 @@
   height: 30px
   z-index: 5
   cursor: pointer
-  transition: background-color 300ms, transform 500ms, opacity 200ms
+  transition: background-color 300ms, transform ease-out 500ms, opacity 200ms
   border-radius: 15px
   &__next
     right: 5px
@@ -17,8 +17,9 @@
     background-size: 25%
   &:hover
     background-color: rgba(255, 255, 255, 0.5)
+    transform: scale(1.3)
   &:active
-    transform: scale(1.2)
+    transform: scale(1)
     background-color: rgba(0, 0, 0, 0)
 
 =carousel-control850

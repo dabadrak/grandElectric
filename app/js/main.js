@@ -1,9 +1,9 @@
 $(document).ready(()=> {
   
   /**
-   * Основное меню в хедере
+   * Управление хедером
    */
-  const mainMenu = (() => {
+  const header = (() => {
     //Создание меню
     const menu = new Menu('mainMenu',
         [
@@ -32,24 +32,40 @@ $(document).ready(()=> {
   
     //Прячет меню при прокрутке вниз и показывает при прокрутке вверх
     const $header = $('#header');
+    const callMeBtn = document.getElementById('callMe');
     let lastScrollTop = 0;
     $(window).scroll(() => {
       let scrollTop = $(this).scrollTop();
       if (scrollTop > lastScrollTop && scrollTop < lastScrollTop + 110 && scrollTop > lastScrollTop + 20) {
         $header.hide('slide', {direction: 'up'}, 200);
       }
-      if (scrollTop < lastScrollTop){
+      if (scrollTop < lastScrollTop && $header.css('display') === 'none'){
         $header.show('slide', {direction: 'up'}, 200);
+        setTimeout(() => {
+          animateButton(callMeBtn);
+        }, 200);
       }
       lastScrollTop = scrollTop;
     });
     
     //Показывает меню при поднятии мышки к верху страницы
     $(document).mousemove(() => {
-      if (event.screenY < 150) {
+      if (event.screenY < 150 && $header.css('display') === 'none') {
         $header.show('slide', {direction: 'up'}, 200);
+        setTimeout(() => {
+          animateButton(callMeBtn);
+        }, 100);
       }
     });
+    
+    //Анимация кнопки
+    function animateButton(button) {
+      button.classList.remove('animate');
+      button.classList.add('animate');
+      setTimeout(function () {
+        button.classList.remove('animate');
+      }, 700);
+    }
     
     //Разворачивает субменю
     const $subMenuContainer = $('.mainMenuSubLi');
@@ -153,7 +169,8 @@ $(document).ready(()=> {
   })();
   
   /**
-   * Управление секцией sericesBig
+   * sericesBig
+   * Управление каруселями в секции
    */
   const servicesBig = (() => {
   
@@ -167,8 +184,10 @@ $(document).ready(()=> {
       }
   );
     /**
-     * Эффекты в servicesOther
+     * servicesOther
+     * Управление кнопками и анимацией в секции.
      */
+    //Аниация, эффекты hover
     const $servicesBigOther = $('.servicesBigOther');
     if ($(window).width() < 850) {
       $servicesBigOther.on('click', '.item', function () {
@@ -179,6 +198,11 @@ $(document).ready(()=> {
         $(this).find('.mask').toggleClass('active');
       })
     }
+    //Прокрутка к секции price и выбор нужной категории при клике по кнопке "Цены"
+    $('.servicesOtherLink').on('click', function () {
+      window.location = '#prices';
+      $('#priceAccordion').accordion('option', 'active', +this.dataset.priceCategoryNum)
+    });
   })();
   
   /**
@@ -225,7 +249,8 @@ $(document).ready(()=> {
     $offersCarouselContainer.owlCarousel({
       items: 1,
       loop: true,
-      dots: true
+      dots: true,
+      autoplay: true,
         }
     );
     $('#offerNext').click(() => {

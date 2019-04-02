@@ -20,10 +20,10 @@ class Price {
   }
   
   _render(items, container) {
-    items.forEach((category, idx) => {
+    items.forEach((category) => {
       const $heading = $(`<h3>${category.category}</h3>`);
       const $itemsContainer = $('<div/>');
-      const $table = $('<table border=0, cellspacing=0, cellpadding=0/>');
+      const $table = $('<table/>');
       const $legend = $('<tr class="price-legend"><td>Наименование</td><td>Цена</td><td>Ед.</td></tr>');
       $heading.appendTo(container);
       $itemsContainer.appendTo(container);
